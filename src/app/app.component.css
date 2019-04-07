@@ -1,0 +1,64 @@
+body{
+  /* height: 3000px; */
+  margin:0;
+  padding:0;
+}
+
+.bgcolor {
+  background-color: #007DB8;
+  top: 0;
+  width: 100%;
+}
+
+.row{
+  display: flex;
+}
+
+.textdeco{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+.uldesign{
+  width: 100%;
+}
+
+.lidesign{
+  list-style-type: none;
+  text-align: right;
+}
+
+.footerbg{
+  background-color: #007DB8;
+  position: fixed;
+  bottom: 0;
+  width: 99%;
+  height: 50px; 
+}
+
+.footerbutton{
+  margin: 7px;
+  padding: 7px;
+  flex:20%;
+}
+
+.itemselection{
+  display: flex;
+  flex:80%;
+  width:100%;
+}
+
+.cartdetails {
+  max-width: 20%;
+  max-height: 80%;
+  transition: .8s;
+  overflow: hidden;
+  border-style: solid;
+  border-color: black;
+}
+
+.cartdetails.hidden {
+  max-width: 0;
+}

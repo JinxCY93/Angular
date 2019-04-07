@@ -1,0 +1,15 @@
+<div id="board">
+  <div class="cell" *ngFor="let cell of moves; let i = index" [style.background-color]="checkCellColor(i)"
+    (click)="playPiece(i)" (mouseover)="hoverOver(i)">
+    <p>{{ cell === blankSymbol ? '' : cell }}</p>
+  </div>
+</div>
+
+<div>It is now {{currentTurn}}'s turn</div>
+
+<div *ngIf="gameOver && winner !== null">
+  <h4>Game Over. {{winner}} has won the game.</h4>
+</div>
+<div *ngIf="gameOver && winner === null">
+  <h4>Game Over. It is a draw</h4>
+</div>

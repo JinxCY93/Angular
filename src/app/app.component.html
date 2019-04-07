@@ -1,0 +1,62 @@
+<head>
+  <script>
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="bgcolor">
+      <nav class="row">
+        <img src="https://www.mysmartgroup.co.uk/wp-content/uploads/2017/12/1-2-dell-logo-3d-white-png.png"
+          height="50px" width="105px" />
+        <ul class="uldesign">
+          <li class="lidesign">
+            <a href="#" class="textdeco" (click)="togglecartdiv()">My Cart</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- left column -->
+  <div class="row">
+    <div class="itemselection">
+      <!-- item selection -->
+      <!-- image, specs,quantity, select button -->
+      <div>this column show item for the user to select</div><br>
+      <ul>
+        <li class="lidesign">
+          <div>
+            <p>System:{{carttesting}}</p>
+            <p>quantity: {{times}}</p>
+            <button id="add" (click)="quantitycountadd()">+</button>
+            <button id="minus" (click)="quantitycountminus()">-</button>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <!-- right column for cart item -->
+    <!-- cart side bar -->
+    <div id="cartbar" class="cartdetails" *ngIf="visible">
+      <p>this is cart div testing</p>
+      <p>{{carttesting}}</p>
+    </div>
+  </div>
+
+  <footer>
+    <!-- clear cart, add to cart, total price -->
+    <div class="footerbg">
+      <nav class="row">
+        <div class="footerbutton">
+          <button (click)="clearcart()">Clear cart</button>
+        </div>
+        <div class="footerbutton">
+          <button>Add to cart</button>
+        </div>
+        <div>
+          <p id="price">Total Price: RM {{itemtotalprice}}</p>
+        </div>
+      </nav>
+    </div>
+  </footer>
+</body>
