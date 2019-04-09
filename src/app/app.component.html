@@ -22,17 +22,18 @@
     <div class="itemselection">
       <!-- item selection -->
       <!-- image, specs,quantity, select button -->
-      <div>this column show item for the user to select</div><br>
-      <ul>
-        <li class="lidesign">
-          <div>
-            <p>System:{{carttesting}}</p>
-            <p>quantity: {{times}}</p>
-            <button id="add" (click)="quantitycountadd()">+</button>
-            <button id="minus" (click)="quantitycountminus()">-</button>
-          </div>
-        </li>
-      </ul>
+      <div id="left-col" class="lefdivdesign" *ngFor="let systemdetails of systems">
+        <h3>{{systemdetails.system}}</h3>
+        <img src="{{systemdetails.imagepath}}" alt="">
+        <p>Processor: {{systemdetails.processor}}</p>
+        <p>RAM: {{systemdetails.ram}}</p>
+        <p>Hard Disk: {{systemdetails.hdd}}</p>
+        <p>LCD Display: {{systemdetails.display}}</p>
+        <p>Price: RM{{systemdetails.price}} </p>
+        <p>Quantity: {{systemdetails.quantity}}</p>
+        <button (click)="quantitycountadd(systemdetails)">+</button>
+        <button (click)="quantitycountminus(systemdetails)">-</button>
+      </div>
 
     </div>
     <!-- right column for cart item -->
@@ -53,8 +54,8 @@
         <div class="footerbutton">
           <button>Add to cart</button>
         </div>
-        <div>
-          <p id="price">Total Price: RM {{itemtotalprice}}</p>
+        <div *ngFor="let systemdetails of systems">
+          <p id="price">Total Price: RM {{systemdetails.price}}</p>
         </div>
       </nav>
     </div>
