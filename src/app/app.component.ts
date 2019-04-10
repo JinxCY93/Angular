@@ -1,4 +1,6 @@
 import { Component, SystemJsNgModuleLoader } from '@angular/core'
+import { createWriteStream } from 'fs';
+import { INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS } from '@angular/platform-browser-dynamic/src/platform_providers';
 
 @Component({
   selector: 'app-root',
@@ -70,5 +72,4 @@ export class AppComponent {
     this.testingitem = {}
     this.carttesting = []
   }
-
 }
